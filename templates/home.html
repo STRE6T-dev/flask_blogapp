@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>STREET BLOG</h1>
+            <span class="subheading">This is a blogging application made by Nelo Marques</span>
+			</div>
+
+			<div> 
+				{% if session.logged_in == NULL %}
+      				<a href="/register" class="btn btn-primary btn-lg">Register</a>
+     			 	<a href="/login" class="btn btn-success btn-lg">Login</a>
+    				{% endif %}
+    		</div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p>Before you write a blog, make sure you know the answers to questions like, "Why would someone keep reading this entire blog post?" and "What makes our audience come back for more?"</p>
+        <p>To start, a good blog post is interesting and educational. Blogs should answer questions and help readers resolve a challenge they're experiencing — and you have to do so in an interesting way.</p>
+        <p>It's not enough just to answer someone's questions — you also have to provide actionable steps while being engaging. For instance, your introduction should hook the reader and make them want to continue reading your post. Then, use examples to keep your readers interested in what you have to say.</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}
